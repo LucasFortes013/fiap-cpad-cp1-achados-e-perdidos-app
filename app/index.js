@@ -1,6 +1,9 @@
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
+import { useRouter } from 'expo-router';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
 
@@ -8,9 +11,16 @@ export default function Home() {
         source={require('../assets/logo.png')}
         style={styles.logo}
       />
-      <Button title="Itens Encontrados" onPress={() => {}} />
+      <Button title="Itens Encontrados"
+       onPress={() => router.push('/itens-encontrados')} 
+      />
+
       <View style={{height: 10}} />
-      <Button title="Cadastrar Item" onPress={() => {}} />
+
+      <Button title="Cadastrar Item" 
+      onPress={() => router.push('/registrar')} 
+      />
+      
     </View>
   );
 }

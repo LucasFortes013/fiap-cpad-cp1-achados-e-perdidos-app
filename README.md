@@ -36,12 +36,14 @@ Pré-requisitos:
 2. Clone o repositório
   - git clone https://github.com/LucasFortes013/fiap-cpad-cp1-achados-e-perdidos-app
 3. Acesse a pasta do projeto
-  - cd achados-e-perdidos-app
-4. Instale as dependências
+  - cd fiap-cpad-cp1-achados-e-perdidos-app
+4. Permitir a execução dos scripts
+  - Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+5. Instale as dependências
   - npm install
-5. Inicie o projeto
+6. Inicie o projeto
   - npx expo start
-6. Execute no celular
+7. Execute no celular
    - Abra o Expo Go
    - Escaneie o QR Code exibido no terminal
   

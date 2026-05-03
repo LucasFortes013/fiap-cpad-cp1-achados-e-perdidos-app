@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 
 export default function Index() {
@@ -6,6 +6,10 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../assets/logo.png')}
+        style={styles.logo}
+      />
 
       <Text style={styles.titulo}>Bem-vindo</Text>
 

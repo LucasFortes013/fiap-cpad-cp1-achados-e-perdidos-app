@@ -91,19 +91,6 @@ export default function Registrar() {
         onChangeText={setLocal}
       />
 
-      <View style={styles.secaoAnexo}>
-        <TouchableOpacity style={styles.botaoAnexo} onPress={selecionarArquivo}>
-          <Text style={styles.botaoAnexoTexto}>
-            {arquivo ? "📎 Arquivo Pronto" : "Anexar PDF ou JPEG"}
-          </Text>
-        </TouchableOpacity>
-        {arquivo && (
-          <Text style={styles.nomeArquivoSelecionado} numberOfLines={1}>
-            Selecionado: {arquivo.name}
-          </Text>
-        )}
-      </View>
-
       <TouchableOpacity style={styles.botao} onPress={handleCadastrar}>
         <Text style={styles.botaoTexto}>Registrar Item</Text>
       </TouchableOpacity>

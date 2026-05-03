@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   botao: {
-    backgroundColor: '#000',
+    backgroundColor: '#FFFFFF',
     padding: 15,
     borderRadius: 10,
     marginBottom: 15,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textoBotao: {
-    color: '#fff',
+    color: '#000000',
     fontWeight: 'bold',
   },
 });

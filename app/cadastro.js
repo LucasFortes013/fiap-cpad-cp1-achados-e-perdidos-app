@@ -93,7 +93,7 @@ export default function Cadastro() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eb1b5b',
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
     padding: 20,
   },

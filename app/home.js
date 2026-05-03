@@ -1,26 +1,26 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 
-export default function Index() {
+export default function Home() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
 
-      <Text style={styles.titulo}>Bem-vindo</Text>
+      <Text style={styles.titulo}>Menu Principal</Text>
 
       <TouchableOpacity
         style={styles.botao}
-        onPress={() => router.push('/login')}
+        onPress={() => router.push('/itens_encontrados')}
       >
-        <Text style={styles.textoBotao}>Login</Text>
+        <Text style={styles.textoBotao}>Itens Encontrados</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.botao}
-        onPress={() => router.push('/cadastro')}
+        onPress={() => router.push('/registrar')}
       >
-        <Text style={styles.textoBotao}>Cadastrar</Text>
+        <Text style={styles.textoBotao}>Cadastrar Item Perdido</Text>
       </TouchableOpacity>
 
     </View>
@@ -36,19 +36,19 @@ const styles = StyleSheet.create({
   },
   titulo: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 28,
     marginBottom: 30,
   },
   botao: {
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     padding: 15,
     borderRadius: 10,
     marginBottom: 15,
-    width: 200,
+    width: 250,
     alignItems: 'center',
   },
   textoBotao: {
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
   },
 });

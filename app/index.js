@@ -35,12 +35,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#eb1b5b',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 60,
     alignItems: 'center',
   },
   logo: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 200,
     marginBottom: 20,
     resizeMode: 'contain',
   },

@@ -38,6 +38,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  logo: {
+    width: 150,
+    height: 150,
+    marginBottom: 20,
+    resizeMode: 'contain',
+  },
   titulo: {
     color: '#fff',
     fontSize: 30,

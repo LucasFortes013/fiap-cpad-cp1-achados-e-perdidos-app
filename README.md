@@ -41,6 +41,8 @@ Pré-requisitos:
   - Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 5. Instale as dependências
   - npm install
+  - npx expo install expo-image-picker
+  - npx expo install expo-document-picker
 6. Inicie o projeto
   - npx expo start
 7. Execute no celular

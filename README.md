@@ -26,12 +26,12 @@ A proposta surgiu a partir de um problema comum no dia a dia: a perda de objetos
 - Expo Document Picker
 - Git e GitHub
 
-<img width="360" height="2400" alt="print2" src="https://github.com/user-attachments/assets/baa1edd8-0eb7-4881-880e-787f9238bf7a" />
-<img width="360" height="2400" alt="print3" src="https://github.com/user-attachments/assets/0ba67544-aa5e-48ee-8c3e-19a07a34c4f6" />
-<img width="360" height="2400" alt="print4" src="https://github.com/user-attachments/assets/16220463-106e-4e15-a318-c9d549ac04f6" />
-<img width="360" height="2400" alt="print5" src="https://github.com/user-attachments/assets/df255c35-09c0-4060-aea5-9445f9180b22" />
-<img width="360" height="2400" alt="print6" src="https://github.com/user-attachments/assets/b7d5c73c-6ba8-4057-b99b-2d6b9fe1e974" />
-<img width="360" height="2400" alt="print1" src="https://github.com/user-attachments/assets/41cfc138-6bcb-4492-9860-1fccd31c2ed5" />
+<img width="1080" height="2400" alt="print2" src="https://github.com/user-attachments/assets/baa1edd8-0eb7-4881-880e-787f9238bf7a" />
+<img width="1080" height="2400" alt="print3" src="https://github.com/user-attachments/assets/0ba67544-aa5e-48ee-8c3e-19a07a34c4f6" />
+<img width="1080" height="2400" alt="print4" src="https://github.com/user-attachments/assets/16220463-106e-4e15-a318-c9d549ac04f6" />
+<img width="1080" height="2400" alt="print5" src="https://github.com/user-attachments/assets/df255c35-09c0-4060-aea5-9445f9180b22" />
+<img width="1080" height="2400" alt="print6" src="https://github.com/user-attachments/assets/b7d5c73c-6ba8-4057-b99b-2d6b9fe1e974" />
+<img width="1080" height="2400" alt="print1" src="https://github.com/user-attachments/assets/41cfc138-6bcb-4492-9860-1fccd31c2ed5" />
 
 
 *Video de demonstração:* https://www.youtube.com/shorts/LqLLgRm3sdU

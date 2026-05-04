@@ -3,6 +3,7 @@ import { useState } from 'react';
 import * as ImagePicker from 'expo-image-picker';
 import * as DocumentPicker from 'expo-document-picker';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Registrar() {
   const [nome, setNome] = useState('');
@@ -41,25 +42,46 @@ export default function Registrar() {
     }
   };
 
-  const handleCadastrar = () => {
+  const handleCadastrar = async () => {
     if (!nome || !local) {
       Alert.alert('Erro', 'Preencha todos os campos!');
       return;
     }
 
-    Alert.alert('Sucesso', 'Item registrado!', [
-      {
-        text: "OK",
-        onPress: () => {
-          router.push('/itens_encontrados'); 
-        }
-      }
-    ]);
+    const novoItem = {
+      id: Date.now().toString(),
+      nome,
+      local,
+      imagem,
+      arquivo
+    };
 
-    setNome('');
-    setLocal('');
-    setImagem(null);
-    setArquivo(null);
+    try {
+      const dados = await AsyncStorage.getItem('itens');
+      let lista = dados ? JSON.parse(dados) : [];
+
+      lista.push(novoItem);
+
+      await AsyncStorage.setItem('itens', JSON.stringify(lista));
+
+      Alert.alert('Sucesso', 'Item registrado!', [
+        {
+          text: "OK",
+          onPress: () => {
+            router.push('/itens_encontrados');
+          }
+        }
+      ]
+    );
+
+      setNome('');
+      setLocal('');
+      setImagem(null);
+      setArquivo(null);
+
+    } catch (erro) {
+      Alert.alert('Erro', 'Não foi possível salvar.');
+    }
   };
 
   return (

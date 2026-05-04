@@ -1,11 +1,30 @@
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { useState, useCallback } from 'react';
+import { useFocusEffect } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ItensEncontrados() {
-  const itens = [
-    { id: '1', nome: 'Caderno', local: 'Sala 101' },
-    { id: '2', nome: 'Celular', local: 'Biblioteca' },
-    { id: '3', nome: 'Mochila', local: 'Cantina' },
-  ];
+  const [itens, setItens] = useState([]);
+
+  // Atualiza sempre que entra na tela
+  useFocusEffect(
+    useCallback(() => {
+      async function carregarItens() {
+        try {
+          const dados = await AsyncStorage.getItem('itens');
+          if (dados) {
+            setItens(JSON.parse(dados));
+          } else {
+            setItens([]);
+          }
+        } catch (erro) {
+          console.log('Erro ao carregar itens:', erro);
+        }
+      }
+
+      carregarItens();
+    }, [])
+  );
 
   return (
     <View style={styles.container}>
@@ -14,10 +33,22 @@ export default function ItensEncontrados() {
       <FlatList
         data={itens}
         keyExtractor={(item) => item.id}
+        ListEmptyComponent={
+          <Text style={styles.vazio}>Nenhum item cadastrado ainda</Text>
+        }
         renderItem={({ item }) => (
           <View style={styles.card}>
+
+            {item.imagem && (
+              <Image
+                source={{ uri: item.imagem }}
+                style={styles.imagem}
+              />
+            )}
+
             <Text style={styles.nome}>{item.nome}</Text>
             <Text style={styles.local}>Local: {item.local}</Text>
+
           </View>
         )}
       />
@@ -37,10 +68,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
   },
+  vazio: {
+    color: '#fff',
+    textAlign: 'center',
+    marginTop: 20,
+  },
   card: {
     backgroundColor: '#fff',
     padding: 15,
     borderRadius: 15,
+    marginBottom: 15,
+    alignItems: 'center',
+  },
+  imagem: {
+    width: 120,
+    height: 120,
+    borderRadius: 10,
     marginBottom: 10,
   },
   nome: {

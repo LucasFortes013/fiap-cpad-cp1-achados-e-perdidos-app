@@ -85,15 +85,15 @@ Essa abordagem foi escolhida por ser simples e suficiente para o escopo do proje
 
 A navegação foi implementada com Expo Router, seguindo o fluxo:
 
-1- Tela inicial
- - Login
- - Cadastro
-2- Após login → Home
- - Acesso às funcionalidades principais
-3- Registro de item
- - Cadastro de nome, local e imagem
-4- Lista de itens
- - Exibição dinâmica dos itens cadastrados
+1. Tela inicial
+- Login
+- Cadastro
+2. Após login → Home
+- Acesso às funcionalidades principais
+3. Registro de item
+- Cadastro de nome, local e imagem
+4. Lista de itens
+- Exibição dinâmica dos itens cadastrados
 
 *Persistência e Dados*
 Os dados são armazenados localmente utilizando o AsyncStorage, permitindo:
